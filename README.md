@@ -18,6 +18,14 @@ Or install it yourself as:
 
     $ gem install rd_api
 
+## Config authentication
+
+export SALESFORCE_USERNAME="username"
+export SALESFORCE_PASSWORD="password"
+export SALESFORCE_SECURITY_TOKEN="security token"
+export SALESFORCE_CLIENT_ID="client id"
+export SALESFORCE_CLIENT_SECRET="client secret"
+
 ## Usage
 
 TODO: Write usage instructions here
