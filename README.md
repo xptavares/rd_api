@@ -1,6 +1,6 @@
 # Rd Api
 
-TODO: Write a gem description
+gem for SalesForce integration. 
 
 ## Installation
 
@@ -20,11 +20,11 @@ Or install it yourself as:
 
 ## Config authentication
 
-export SALESFORCE_USERNAME="username"
-export SALESFORCE_PASSWORD="password"
-export SALESFORCE_SECURITY_TOKEN="security token"
-export SALESFORCE_CLIENT_ID="client id"
-export SALESFORCE_CLIENT_SECRET="client secret"
+    $ export SALESFORCE_USERNAME="username"
+    $ export SALESFORCE_PASSWORD="password"
+    $ export SALESFORCE_SECURITY_TOKEN="security token"
+    $ export SALESFORCE_CLIENT_ID="client id"
+    $ export SALESFORCE_CLIENT_SECRET="client secret"
 
 ## Usage
 
