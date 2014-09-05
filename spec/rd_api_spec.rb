@@ -1,5 +1,12 @@
 require 'spec_helper'
 
+RSpec::Matchers.define :greater_than  do |expected|
+  match do |actual|
+    actual > expected
+  end
+end
+
+
 describe RdApi::Account do
 
 	let(:id) { '001o0000007gkAOAAY' }
@@ -9,6 +16,10 @@ describe RdApi::Account do
 	let(:account) { RdApi::Account.new }
 	let(:account_name) { account.find_by_id(id).Name }
 	let(:new_account_id) { account.create(new_name) }
+
+	it '#find all' do
+		expect(account.all.count).to greater_than 0
+	end
 
   	it '#account_name' do
   		expect(account_name).to eq name

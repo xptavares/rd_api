@@ -11,7 +11,7 @@ module RdApi
 		end
 
 		def all
-
+			client.query('select Id, Name from Account')
 		end
 
 		def find_by_id(id)
