@@ -5,7 +5,7 @@ require 'rd_api/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "rd_api"
-  spec.version       = Rd::VERSION
+  spec.version       = RdApi::VERSION
   spec.authors       = ["Alexandre Tavares"]
   spec.email         = ["xptavares@gmail.com"]
   spec.summary       = %q{TODO: Write a short summary. Required.}
