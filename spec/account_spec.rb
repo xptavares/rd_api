@@ -10,18 +10,18 @@ describe RdApi::Account do
 
   let(:attrs) do
    {
-     :username       = 'ENV["SALESFORCE_USERNAME"]',
-     :password       = 'ENV["SALESFORCE_PASSWORD"]',
-     :security_token = 'ENV["SALESFORCE_SECURITY_TOKEN"]',
-     :client_id      = 'ENV["SALESFORCE_CLIENT_ID"]',
-     :client_secret  = 'ENV["SALESFORCE_CLIENT_SECRET"]'
+     :username => ENV["SALESFORCE_USERNAME"],
+     :password => ENV["SALESFORCE_PASSWORD"],
+     :security_token => ENV["SALESFORCE_SECURITY_TOKEN"],
+     :client_id => ENV["SALESFORCE_CLIENT_ID"],
+     :client_secret => ENV["SALESFORCE_CLIENT_SECRET"]
    }
   end
   let(:id) { '001o0000007gkAOAAY' }
   let(:name) { 'GenePoint' }
   let(:new_name) { 'New Name' }
   let(:new_edit_name) { 'New Edit Name' }
-  let(:account) { RdApi::Account.new(attrs.username, attrs.password, attrs.security_token, attrs.client_id, attrs.client_secret) }
+  let(:account) { RdApi::Account.new(attrs)  }
   let(:account_name) { account.find_by_id(id).Name }
   let(:new_account_id) { account.create(new_name) }
   

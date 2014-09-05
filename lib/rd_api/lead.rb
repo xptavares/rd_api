@@ -5,15 +5,8 @@ module RdApi
   class Lead
     attr_accessor :client
     
-    def initialize(:username, :password, :security_token, :client_id, :client_secret)
-      c = {
-        :username       => username,
-        :password       => password,
-        :security_token => security_token,
-        :client_id      => client_id,
-        :client_secret  => client_secret
-      }
-      @client = Restforce.new c
+    def initialize(attrs)
+      @client = Restforce.new(attrs)
     end
   
     def all
