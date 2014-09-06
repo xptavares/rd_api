@@ -13,19 +13,19 @@ module RdApi
       @client.query('select Id, Account.Name, Account.Site, Phone, Email from Contact')
     end
   
-    def find_by_id(id:)
+    def find_by_id(id)
       @client.find('Contact', id)
     end
   
-    def create(title:, phone:, email:)
-      @client.create('Contact', Phone: phone, Email: email)
+    def create(name, phone, email)
+      @client.create('Contact', LastName: name)
     end
 
-    def update(id:, phone:, email:)
-      @client.update('Contact', Id: id, Phone: phone, Email: email)
+    def update(id, name, phone, email)
+      @client.update('Contact', Id: id, LastName: name)
     end
 
-    def destroy(id:)
+    def destroy(id)
       @client.destroy('Contact', id)
     end
   end

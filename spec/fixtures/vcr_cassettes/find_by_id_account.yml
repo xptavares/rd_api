@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://login.salesforce.com/services/oauth2/token
+    body:
+      encoding: US-ASCII
+      string: grant_type=password&client_id=3MVG9xOCXq4ID1uE7J0Lsh_HB4mKCSUpUtYqg7jLxASG7CvXgX74u8QW5VOPXbkLxISw4QrzVmip9TWxBR_Xk&client_secret=8459004633053529605&username=xptavares%40gmail.com&password=120430ale4VZjPPcUBhQmFVfp6jGTlgCI9
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 06 Sep 2014 00:04:01 GMT
+      Set-Cookie:
+      - BrowserId=DBkR393TQBmhF0pokcdYcA;Path=/;Domain=.salesforce.com;Expires=Wed,
+        05-Nov-2014 00:04:01 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache, no-store
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":"https://login.salesforce.com/id/00Do0000000Zn13EAC/005o0000000xr6hAAA","issued_at":"1409961841885","token_type":"Bearer","instance_url":"https://na17.salesforce.com","signature":"rGp0yLRlEfyHYGz8u5CZkkMnZm6EFHjvWcZ/eSzbtTw=","access_token":"00Do0000000Zn13!ARQAQLuncHwxQ2WUHHdG8fp0Z0QjJp5yahqY5VgbSR4g6JZmWoI1aTpHRrf17ylL7aSkKQv.hbiIjGYgyGzL6Iz1EwQxEPEI"}'
+    http_version: 
+  recorded_at: Sat, 06 Sep 2014 00:04:02 GMT
+- request:
+    method: get
+    uri: https://na17.salesforce.com/services/data/v26.0/sobjects/Account/001o0000007gkAOAAY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Authorization:
+      - OAuth 00Do0000000Zn13!ARQAQLuncHwxQ2WUHHdG8fp0Z0QjJp5yahqY5VgbSR4g6JZmWoI1aTpHRrf17ylL7aSkKQv.hbiIjGYgyGzL6Iz1EwQxEPEI
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 06 Sep 2014 00:04:03 GMT
+      Set-Cookie:
+      - BrowserId=1Uu_lmONT76iLtNjdaPc-A;Path=/;Domain=.salesforce.com;Expires=Wed,
+        05-Nov-2014 00:04:03 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Sforce-Limit-Info:
+      - api-usage=134/15000
+      Last-Modified:
+      - Thu, 04 Sep 2014 01:37:00 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkAOAAY"},"Id":"001o0000007gkAOAAY","IsDeleted":false,"MasterRecordId":null,"Name":"GenePoint","Type":"Customer
+        - Channel","ParentId":null,"BillingStreet":"345 Shoreline Park\nMountain View,
+        CA 94043\nUSA","BillingCity":"Mountain View","BillingState":"CA","BillingPostalCode":null,"BillingCountry":null,"ShippingStreet":"345
+        Shoreline Park\nMountain View, CA 94043\nUSA","ShippingCity":null,"ShippingState":null,"ShippingPostalCode":null,"ShippingCountry":null,"Phone":"(650)
+        867-3450","Fax":"(650) 867-9895","AccountNumber":"CC978213","Website":"www.genepoint.com","Sic":"3712","Industry":"Biotechnology","AnnualRevenue":3.0E7,"NumberOfEmployees":265,"Ownership":"Private","TickerSymbol":null,"Description":"Genomics
+        company engaged in mapping and sequencing of the human genome and developing
+        gene-based drugs","Rating":"Cold","Site":null,"OwnerId":"005o0000000xr6hAAA","CreatedDate":"2014-09-04T01:37:00.000+0000","CreatedById":"005o0000000xr6hAAA","LastModifiedDate":"2014-09-04T01:37:00.000+0000","LastModifiedById":"005o0000000xr6hAAA","SystemModstamp":"2014-09-04T01:37:00.000+0000","LastActivityDate":null,"Jigsaw":null,"JigsawCompanyId":null,"CleanStatus":"Pending","AccountSource":null,"DunsNumber":null,"Tradestyle":null,"NaicsCode":null,"NaicsDesc":null,"YearStarted":null,"SicDesc":null,"DandbCompanyId":null,"CustomerPriority__c":"Low","SLA__c":"Bronze","Active__c":"Yes","NumberofLocations__c":1.0,"UpsellOpportunity__c":"Yes","SLASerialNumber__c":"7324","SLAExpirationDate__c":"2014-04-01"}'
+    http_version: 
+  recorded_at: Sat, 06 Sep 2014 00:04:03 GMT
+recorded_with: VCR 2.9.2

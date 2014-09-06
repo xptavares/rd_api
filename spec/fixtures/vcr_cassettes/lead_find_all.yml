@@ -1,0 +1,108 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://login.salesforce.com/services/oauth2/token
+    body:
+      encoding: US-ASCII
+      string: grant_type=password&client_id=3MVG9xOCXq4ID1uE7J0Lsh_HB4mKCSUpUtYqg7jLxASG7CvXgX74u8QW5VOPXbkLxISw4QrzVmip9TWxBR_Xk&client_secret=8459004633053529605&username=xptavares%40gmail.com&password=120430ale4VZjPPcUBhQmFVfp6jGTlgCI9
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 06 Sep 2014 00:25:10 GMT
+      Set-Cookie:
+      - BrowserId=Zz9DrPTJSdOaeUiTY6OESQ;Path=/;Domain=.salesforce.com;Expires=Wed,
+        05-Nov-2014 00:25:10 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache, no-store
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":"https://login.salesforce.com/id/00Do0000000Zn13EAC/005o0000000xr6hAAA","issued_at":"1409963111131","token_type":"Bearer","instance_url":"https://na17.salesforce.com","signature":"jzmykm0bHQkppBmswkx+Eig3/wCk/vIR5PNvlqzE7Ag=","access_token":"00Do0000000Zn13!ARQAQLuncHwxQ2WUHHdG8fp0Z0QjJp5yahqY5VgbSR4g6JZmWoI1aTpHRrf17ylL7aSkKQv.hbiIjGYgyGzL6Iz1EwQxEPEI"}'
+    http_version: 
+  recorded_at: Sat, 06 Sep 2014 00:25:11 GMT
+- request:
+    method: get
+    uri: https://na17.salesforce.com/services/data/v26.0/query?q=select%20Id,%20Title,%20Phone,%20Company,%20Email,%20FirstName,%20LastName%20from%20Lead
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Authorization:
+      - OAuth 00Do0000000Zn13!ARQAQLuncHwxQ2WUHHdG8fp0Z0QjJp5yahqY5VgbSR4g6JZmWoI1aTpHRrf17ylL7aSkKQv.hbiIjGYgyGzL6Iz1EwQxEPEI
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 06 Sep 2014 00:25:12 GMT
+      Set-Cookie:
+      - BrowserId=OcxOKzm_RB2PQJ1vPfIeGg;Path=/;Domain=.salesforce.com;Expires=Wed,
+        05-Nov-2014 00:25:12 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Sforce-Limit-Info:
+      - api-usage=159/15000
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"totalSize":22,"done":true,"records":[{"attributes":{"type":"Lead","url":"/services/data/v26.0/sobjects/Lead/00Qo0000003IffGEAS"},"Id":"00Qo0000003IffGEAS","Title":"Director
+        of Vendor Relations","Phone":"(850) 644-4200","Company":"Farmers Coop. of
+        Florida","Email":"bertha@fcof.net","FirstName":"Bertha","LastName":"Boxer"},{"attributes":{"type":"Lead","url":"/services/data/v26.0/sobjects/Lead/00Qo0000003IffHEAS"},"Id":"00Qo0000003IffHEAS","Title":"CFO","Phone":"(703)
+        757-1000","Company":"Abbott Insurance","Email":"pcotton@abbottins.net","FirstName":"Phyllis","LastName":"Cotton"},{"attributes":{"type":"Lead","url":"/services/data/v26.0/sobjects/Lead/00Qo0000003IffIEAS"},"Id":"00Qo0000003IffIEAS","Title":"SVP,
+        Procurement","Phone":"886-2-25474189","Company":"Jackson Controls","Email":"jeffg@jackson.com","FirstName":"Jeff","LastName":"Glimpse"},{"attributes":{"type":"Lead","url":"/services/data/v26.0/sobjects/Lead/00Qo0000003IffJEAS"},"Id":"00Qo0000003IffJEAS","Title":"VP,
+        Technology","Phone":"(410) 381-2334","Company":"Metropolitan Health Services","Email":"likeb@metro.com","FirstName":"Mike","LastName":"Braund"},{"attributes":{"type":"Lead","url":"/services/data/v26.0/sobjects/Lead/00Qo0000003IffKEAS"},"Id":"00Qo0000003IffKEAS","Title":"CEO","Phone":"(336)
+        777-1970","Company":"International Shipping Co.","Email":"patricia_feager@is.com","FirstName":"Patricia","LastName":"Feager"},{"attributes":{"type":"Lead","url":"/services/data/v26.0/sobjects/Lead/00Qo0000003IffLEAS"},"Id":"00Qo0000003IffLEAS","Title":"CFO","Phone":"(847)
+        262-5000","Company":"Cadinal Inc.","Email":"brenda@cardinal.net","FirstName":"Brenda","LastName":"Mcclure"},{"attributes":{"type":"Lead","url":"/services/data/v26.0/sobjects/Lead/00Qo0000003IffMEAS"},"Id":"00Qo0000003IffMEAS","Title":"VP,
+        Finance","Phone":"(770) 395-2370","Company":"Emerson Transport","Email":"violetm@emersontransport.com","FirstName":"Violet","LastName":"Maccleod"},{"attributes":{"type":"Lead","url":"/services/data/v26.0/sobjects/Lead/00Qo0000003IffNEAS"},"Id":"00Qo0000003IffNEAS","Title":"Regional
+        General Manager","Phone":"(860) 273-0123","Company":"TNR Corp.","Email":"ksynder@tnr.net","FirstName":"Kathy","LastName":"Snyder"},{"attributes":{"type":"Lead","url":"/services/data/v26.0/sobjects/Lead/00Qo0000003IffOEAS"},"Id":"00Qo0000003IffOEAS","Title":"SVP,
+        Production","Phone":"(952) 346-3500","Company":"Delphi Chemicals","Email":"tom.james@delphi.chemicals.com","FirstName":"Tom","LastName":"James"},{"attributes":{"type":"Lead","url":"/services/data/v26.0/sobjects/Lead/00Qo0000003IffPEAS"},"Id":"00Qo0000003IffPEAS","Title":"SVP,
+        Technology","Phone":"(408) 326-9000","Company":"Western Telecommunications
+        Corp.","Email":"shellyb@westerntelecom.com","FirstName":"Shelly","LastName":"Brownell"},{"attributes":{"type":"Lead","url":"/services/data/v26.0/sobjects/Lead/00Qo0000003IffQEAS"},"Id":"00Qo0000003IffQEAS","Title":"SVP,
+        Technology","Phone":"(570) 326-1571","Company":"Hendrickson Trading","Email":"pam_owenby@hendricksontrading.com","FirstName":"Pamela","LastName":"Owenby"},{"attributes":{"type":"Lead","url":"/services/data/v26.0/sobjects/Lead/00Qo0000003IffREAS"},"Id":"00Qo0000003IffREAS","Title":"VP,
+        Facilities","Phone":"(419) 289-3555","Company":"Greenwich Media","Email":"norm_may@greenwich.net","FirstName":"Norm","LastName":"May"},{"attributes":{"type":"Lead","url":"/services/data/v26.0/sobjects/Lead/00Qo0000003IffSEAS"},"Id":"00Qo0000003IffSEAS","Title":"SVP,
+        Administration and Finance","Phone":"33562156600","Company":"Pyramid Construction
+        Inc.","Email":"pat@pyramid.net","FirstName":"Pat","LastName":"Stumuller"},{"attributes":{"type":"Lead","url":"/services/data/v26.0/sobjects/Lead/00Qo0000003IffTEAS"},"Id":"00Qo0000003IffTEAS","Title":"SVP,
+        Operations","Phone":"(620) 241-6200","Company":"Dickenson plc","Email":"a_young@dickenson.com","FirstName":"Andy","LastName":"Young"},{"attributes":{"type":"Lead","url":"/services/data/v26.0/sobjects/Lead/00Qo0000003IffUEAS"},"Id":"00Qo0000003IffUEAS","Title":"Director,
+        Warehouse Mgmt","Phone":"(434) 369-3100","Company":"Aethna Home Products","Email":"kakin@athenahome.com","FirstName":"Kristen","LastName":"Akin"},{"attributes":{"type":"Lead","url":"/services/data/v26.0/sobjects/Lead/00Qo0000003IffVEAS"},"Id":"00Qo0000003IffVEAS","Title":"CFO","Phone":"(033)
+        452-1299","Company":"Blues Entertainment Corp.","Email":"david@blues.com","FirstName":"David","LastName":"Monaco"},{"attributes":{"type":"Lead","url":"/services/data/v26.0/sobjects/Lead/00Qo0000003IffWEAS"},"Id":"00Qo0000003IffWEAS","Title":"VP,
+        Technology","Phone":"(251) 679-2200","Company":"Ace Iron and Steel Inc.","Email":"carolync@aceis.com","FirstName":"Carolyn","LastName":"Crenshaw"},{"attributes":{"type":"Lead","url":"/services/data/v26.0/sobjects/Lead/00Qo0000003IffXEAS"},"Id":"00Qo0000003IffXEAS","Title":"VP,
+        Facilities","Phone":"(336) 222-7000","Company":"Burlington Textiles Corp of
+        America","Email":"jrogers@btca.com","FirstName":"Jack","LastName":"Rogers"},{"attributes":{"type":"Lead","url":"/services/data/v26.0/sobjects/Lead/00Qo0000003IffYEAS"},"Id":"00Qo0000003IffYEAS","Title":"CFO","Phone":"(614)
+        431-5000","Company":"Zenith Industrial Partners","Email":"bill_dadio@zenith.com","FirstName":"Bill","LastName":"Dadio
+        Jr"},{"attributes":{"type":"Lead","url":"/services/data/v26.0/sobjects/Lead/00Qo0000003IffZEAS"},"Id":"00Qo0000003IffZEAS","Title":"CEO","Phone":"(781)
+        270-6500","Company":"Pacific Retail Group","Email":"eluce@pacificretail.com","FirstName":"Eugena","LastName":"Luce"},{"attributes":{"type":"Lead","url":"/services/data/v26.0/sobjects/Lead/00Qo0000003IffaEAC"},"Id":"00Qo0000003IffaEAC","Title":"VP,
+        Production","Phone":"(626) 440-0700","Company":"Highland Manufacturing Ltd.","Email":"sandra_e@highland.net","FirstName":"Sandra","LastName":"Eberhard"},{"attributes":{"type":"Lead","url":"/services/data/v26.0/sobjects/Lead/00Qo0000003IffbEAC"},"Id":"00Qo0000003IffbEAC","Title":"VP,
+        Administration","Phone":"(610) 265-9100","Company":"American Banking Corp.","Email":"bblair@abankingco.com","FirstName":"Betty","LastName":"Bair"}]}'
+    http_version: 
+  recorded_at: Sat, 06 Sep 2014 00:25:13 GMT
+recorded_with: VCR 2.9.2

@@ -1,0 +1,126 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://login.salesforce.com/services/oauth2/token
+    body:
+      encoding: US-ASCII
+      string: grant_type=password&client_id=3MVG9xOCXq4ID1uE7J0Lsh_HB4mKCSUpUtYqg7jLxASG7CvXgX74u8QW5VOPXbkLxISw4QrzVmip9TWxBR_Xk&client_secret=8459004633053529605&username=xptavares%40gmail.com&password=120430ale4VZjPPcUBhQmFVfp6jGTlgCI9
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 06 Sep 2014 00:04:04 GMT
+      Set-Cookie:
+      - BrowserId=g2UA7xE6SFW29NphqgE0cQ;Path=/;Domain=.salesforce.com;Expires=Wed,
+        05-Nov-2014 00:04:04 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache, no-store
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":"https://login.salesforce.com/id/00Do0000000Zn13EAC/005o0000000xr6hAAA","issued_at":"1409961844661","token_type":"Bearer","instance_url":"https://na17.salesforce.com","signature":"J6AGNsh4iefNzVZZ8GdnKl2Emw5OhA21T0ih5uXc4Lk=","access_token":"00Do0000000Zn13!ARQAQLuncHwxQ2WUHHdG8fp0Z0QjJp5yahqY5VgbSR4g6JZmWoI1aTpHRrf17ylL7aSkKQv.hbiIjGYgyGzL6Iz1EwQxEPEI"}'
+    http_version: 
+  recorded_at: Sat, 06 Sep 2014 00:04:05 GMT
+- request:
+    method: post
+    uri: https://na17.salesforce.com/services/data/v26.0/sobjects/Account
+    body:
+      encoding: UTF-8
+      string: '{"Name":"New Name"}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Content-Type:
+      - application/json
+      Authorization:
+      - OAuth 00Do0000000Zn13!ARQAQLuncHwxQ2WUHHdG8fp0Z0QjJp5yahqY5VgbSR4g6JZmWoI1aTpHRrf17ylL7aSkKQv.hbiIjGYgyGzL6Iz1EwQxEPEI
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Sat, 06 Sep 2014 00:04:05 GMT
+      Set-Cookie:
+      - BrowserId=2Qef7YKkQ1mlOxJX2A7z5A;Path=/;Domain=.salesforce.com;Expires=Wed,
+        05-Nov-2014 00:04:05 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Sforce-Limit-Info:
+      - api-usage=134/15000
+      Location:
+      - "/services/data/v26.0/sobjects/Account/001o0000007lyxhAAA"
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":"001o0000007lyxhAAA","success":true,"errors":[]}'
+    http_version: 
+  recorded_at: Sat, 06 Sep 2014 00:04:06 GMT
+- request:
+    method: get
+    uri: https://na17.salesforce.com/services/data/v26.0/sobjects/Account/001o0000007lyxhAAA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Authorization:
+      - OAuth 00Do0000000Zn13!ARQAQLuncHwxQ2WUHHdG8fp0Z0QjJp5yahqY5VgbSR4g6JZmWoI1aTpHRrf17ylL7aSkKQv.hbiIjGYgyGzL6Iz1EwQxEPEI
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 06 Sep 2014 00:04:06 GMT
+      Set-Cookie:
+      - BrowserId=9gtdEsUCQH-IIR-vzxVM8w;Path=/;Domain=.salesforce.com;Expires=Wed,
+        05-Nov-2014 00:04:06 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Sforce-Limit-Info:
+      - api-usage=134/15000
+      Last-Modified:
+      - Sat, 06 Sep 2014 00:04:05 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007lyxhAAA"},"Id":"001o0000007lyxhAAA","IsDeleted":false,"MasterRecordId":null,"Name":"New
+        Name","Type":null,"ParentId":null,"BillingStreet":null,"BillingCity":null,"BillingState":null,"BillingPostalCode":null,"BillingCountry":null,"ShippingStreet":null,"ShippingCity":null,"ShippingState":null,"ShippingPostalCode":null,"ShippingCountry":null,"Phone":null,"Fax":null,"AccountNumber":null,"Website":null,"Sic":null,"Industry":null,"AnnualRevenue":null,"NumberOfEmployees":null,"Ownership":null,"TickerSymbol":null,"Description":null,"Rating":null,"Site":null,"OwnerId":"005o0000000xr6hAAA","CreatedDate":"2014-09-06T00:04:05.000+0000","CreatedById":"005o0000000xr6hAAA","LastModifiedDate":"2014-09-06T00:04:05.000+0000","LastModifiedById":"005o0000000xr6hAAA","SystemModstamp":"2014-09-06T00:04:05.000+0000","LastActivityDate":null,"Jigsaw":null,"JigsawCompanyId":null,"CleanStatus":"Pending","AccountSource":null,"DunsNumber":null,"Tradestyle":null,"NaicsCode":null,"NaicsDesc":null,"YearStarted":null,"SicDesc":null,"DandbCompanyId":null,"CustomerPriority__c":null,"SLA__c":null,"Active__c":null,"NumberofLocations__c":null,"UpsellOpportunity__c":null,"SLASerialNumber__c":null,"SLAExpirationDate__c":null}'
+    http_version: 
+  recorded_at: Sat, 06 Sep 2014 00:04:07 GMT
+recorded_with: VCR 2.9.2

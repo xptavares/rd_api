@@ -1,0 +1,119 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://login.salesforce.com/services/oauth2/token
+    body:
+      encoding: US-ASCII
+      string: grant_type=password&client_id=3MVG9xOCXq4ID1uE7J0Lsh_HB4mKCSUpUtYqg7jLxASG7CvXgX74u8QW5VOPXbkLxISw4QrzVmip9TWxBR_Xk&client_secret=8459004633053529605&username=xptavares%40gmail.com&password=120430ale4VZjPPcUBhQmFVfp6jGTlgCI9
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 06 Sep 2014 00:04:17 GMT
+      Set-Cookie:
+      - BrowserId=7rDvuOmvTU2kLvOVozk6qw;Path=/;Domain=.salesforce.com;Expires=Wed,
+        05-Nov-2014 00:04:17 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache, no-store
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":"https://login.salesforce.com/id/00Do0000000Zn13EAC/005o0000000xr6hAAA","issued_at":"1409961858179","token_type":"Bearer","instance_url":"https://na17.salesforce.com","signature":"SAofieY5qFW2IL95iLaO6/P9lOzhiJWIvasaEEHh1Sk=","access_token":"00Do0000000Zn13!ARQAQLuncHwxQ2WUHHdG8fp0Z0QjJp5yahqY5VgbSR4g6JZmWoI1aTpHRrf17ylL7aSkKQv.hbiIjGYgyGzL6Iz1EwQxEPEI"}'
+    http_version: 
+  recorded_at: Sat, 06 Sep 2014 00:04:18 GMT
+- request:
+    method: post
+    uri: https://na17.salesforce.com/services/data/v26.0/sobjects/Account
+    body:
+      encoding: UTF-8
+      string: '{"Name":"New Name"}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Content-Type:
+      - application/json
+      Authorization:
+      - OAuth 00Do0000000Zn13!ARQAQLuncHwxQ2WUHHdG8fp0Z0QjJp5yahqY5VgbSR4g6JZmWoI1aTpHRrf17ylL7aSkKQv.hbiIjGYgyGzL6Iz1EwQxEPEI
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Sat, 06 Sep 2014 00:04:19 GMT
+      Set-Cookie:
+      - BrowserId=GXT0sgwAQWCstPj4zb1YRw;Path=/;Domain=.salesforce.com;Expires=Wed,
+        05-Nov-2014 00:04:19 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Sforce-Limit-Info:
+      - api-usage=135/15000
+      Location:
+      - "/services/data/v26.0/sobjects/Account/001o0000007lyy1AAA"
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":"001o0000007lyy1AAA","success":true,"errors":[]}'
+    http_version: 
+  recorded_at: Sat, 06 Sep 2014 00:04:20 GMT
+- request:
+    method: delete
+    uri: https://na17.salesforce.com/services/data/v26.0/sobjects/Account/001o0000007lyy1AAA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Authorization:
+      - OAuth 00Do0000000Zn13!ARQAQLuncHwxQ2WUHHdG8fp0Z0QjJp5yahqY5VgbSR4g6JZmWoI1aTpHRrf17ylL7aSkKQv.hbiIjGYgyGzL6Iz1EwQxEPEI
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Date:
+      - Sat, 06 Sep 2014 00:04:20 GMT
+      Set-Cookie:
+      - BrowserId=-_dhWKkFSnm53fClvQZNzQ;Path=/;Domain=.salesforce.com;Expires=Wed,
+        05-Nov-2014 00:04:20 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Sforce-Limit-Info:
+      - api-usage=135/15000
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Sat, 06 Sep 2014 00:04:20 GMT
+recorded_with: VCR 2.9.2

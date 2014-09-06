@@ -1,0 +1,157 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://login.salesforce.com/services/oauth2/token
+    body:
+      encoding: US-ASCII
+      string: grant_type=password&client_id=3MVG9xOCXq4ID1uE7J0Lsh_HB4mKCSUpUtYqg7jLxASG7CvXgX74u8QW5VOPXbkLxISw4QrzVmip9TWxBR_Xk&client_secret=8459004633053529605&username=xptavares%40gmail.com&password=120430ale4VZjPPcUBhQmFVfp6jGTlgCI9
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 06 Sep 2014 00:03:58 GMT
+      Set-Cookie:
+      - BrowserId=xMt7-tuDRIeV1JDfbYID4w;Path=/;Domain=.salesforce.com;Expires=Wed,
+        05-Nov-2014 00:03:58 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache, no-store
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":"https://login.salesforce.com/id/00Do0000000Zn13EAC/005o0000000xr6hAAA","issued_at":"1409961838503","token_type":"Bearer","instance_url":"https://na17.salesforce.com","signature":"3DIaZMFzMXfaO065wZXToE8dHtN5B2XllWydLOq3Qg4=","access_token":"00Do0000000Zn13!ARQAQLuncHwxQ2WUHHdG8fp0Z0QjJp5yahqY5VgbSR4g6JZmWoI1aTpHRrf17ylL7aSkKQv.hbiIjGYgyGzL6Iz1EwQxEPEI"}'
+    http_version: 
+  recorded_at: Sat, 06 Sep 2014 00:03:58 GMT
+- request:
+    method: get
+    uri: https://na17.salesforce.com/services/data/v26.0/query?q=select%20Id,%20Name,%20Site,%20Phone%20from%20Account
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Authorization:
+      - OAuth 00Do0000000Zn13!ARQAQLuncHwxQ2WUHHdG8fp0Z0QjJp5yahqY5VgbSR4g6JZmWoI1aTpHRrf17ylL7aSkKQv.hbiIjGYgyGzL6Iz1EwQxEPEI
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 06 Sep 2014 00:04:00 GMT
+      Set-Cookie:
+      - BrowserId=2vQQeEx2QxO4BCnjG0Lx9A;Path=/;Domain=.salesforce.com;Expires=Wed,
+        05-Nov-2014 00:04:00 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Sforce-Limit-Info:
+      - api-usage=135/15000
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"totalSize":76,"done":true,"records":[{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkAOAAY"},"Id":"001o0000007gkAOAAY","Name":"GenePoint","Site":null,"Phone":"(650)
+        867-3450"},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkAPAAY"},"Id":"001o0000007gkAPAAY","Name":"United
+        Oil & Gas, UK","Site":null,"Phone":"+44 191 4956203"},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkAQAAY"},"Id":"001o0000007gkAQAAY","Name":"United
+        Oil & Gas, Singapore","Site":null,"Phone":"(650) 450-8810"},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkARAAY"},"Id":"001o0000007gkARAAY","Name":"Edge
+        Communications","Site":null,"Phone":"(512) 757-6000"},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkASAAY"},"Id":"001o0000007gkASAAY","Name":"Burlington
+        Textiles Corp of America","Site":null,"Phone":"(336) 222-7000"},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkATAAY"},"Id":"001o0000007gkATAAY","Name":"Pyramid
+        Construction Inc.","Site":null,"Phone":"(014) 427-4427"},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkAUAAY"},"Id":"001o0000007gkAUAAY","Name":"Dickenson
+        plc","Site":null,"Phone":"(785) 241-6200"},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkAVAAY"},"Id":"001o0000007gkAVAAY","Name":"Grand
+        Hotels & Resorts Ltd","Site":null,"Phone":"(312) 596-1000"},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkAWAAY"},"Id":"001o0000007gkAWAAY","Name":"Express
+        Logistics and Transport","Site":null,"Phone":"(503) 421-7800"},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkAXAAY"},"Id":"001o0000007gkAXAAY","Name":"University
+        of Arizona","Site":null,"Phone":"(520) 773-9050"},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkAYAAY"},"Id":"001o0000007gkAYAAY","Name":"United
+        Oil & Gas Corp.","Site":null,"Phone":"(212) 842-5500"},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkAZAAY"},"Id":"001o0000007gkAZAAY","Name":"sForce","Site":null,"Phone":"(415)
+        901-7000"},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007lx95AAA"},"Id":"001o0000007lx95AAA","Name":"New
+        Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007kiEGAAY"},"Id":"001o0000007kiEGAAY","Name":"New
+        Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007lwxfAAA"},"Id":"001o0000007lwxfAAA","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007kiIcAAI"},"Id":"001o0000007kiIcAAI","Name":"New
+        Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007kkOBAAY"},"Id":"001o0000007kkOBAAY","Name":"New
+        Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007klk3AAA"},"Id":"001o0000007klk3AAA","Name":"New
+        Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007lx8MAAQ"},"Id":"001o0000007lx8MAAQ","Name":"New
+        Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007lwyEAAQ"},"Id":"001o0000007lwyEAAQ","Name":"New
+        Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007lx58AAA"},"Id":"001o0000007lx58AAA","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007lx9PAAQ"},"Id":"001o0000007lx9PAAQ","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007kiEQAAY"},"Id":"001o0000007kiEQAAY","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007kiEpAAI"},"Id":"001o0000007kiEpAAI","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007kjqVAAQ"},"Id":"001o0000007kjqVAAQ","Name":"New
+        Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007klqzAAA"},"Id":"001o0000007klqzAAA","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007lwyjAAA"},"Id":"001o0000007lwyjAAA","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007lyRfAAI"},"Id":"001o0000007lyRfAAI","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007kiImAAI"},"Id":"001o0000007kiImAAI","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007khtzAAA"},"Id":"001o0000007khtzAAA","Name":"New
+        Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007lyx8AAA"},"Id":"001o0000007lyx8AAA","Name":"New
+        Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007klnmAAA"},"Id":"001o0000007klnmAAA","Name":"New
+        Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007lx5rAAA"},"Id":"001o0000007lx5rAAA","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007lx7dAAA"},"Id":"001o0000007lx7dAAA","Name":"New
+        Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007lx8RAAQ"},"Id":"001o0000007lx8RAAQ","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007klrxAAA"},"Id":"001o0000007klrxAAA","Name":"New
+        Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007klsCAAQ"},"Id":"001o0000007klsCAAQ","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007lx9FAAQ"},"Id":"001o0000007lx9FAAQ","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007kkOzAAI"},"Id":"001o0000007kkOzAAI","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007lwplAAA"},"Id":"001o0000007lwplAAA","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007kiFeAAI"},"Id":"001o0000007kiFeAAI","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007kls2AAA"},"Id":"001o0000007kls2AAA","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007kiEfAAI"},"Id":"001o0000007kiEfAAI","Name":"New
+        Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007kiFjAAI"},"Id":"001o0000007kiFjAAI","Name":"New
+        Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007kk2QAAQ"},"Id":"001o0000007kk2QAAQ","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007khxDAAQ"},"Id":"001o0000007khxDAAQ","Name":"New
+        Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007lyRkAAI"},"Id":"001o0000007lyRkAAI","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007kjEfAAI"},"Id":"001o0000007kjEfAAI","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007kiEkAAI"},"Id":"001o0000007kiEkAAI","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007kghdAAA"},"Id":"001o0000007kghdAAA","Name":"New
+        Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007ki8mAAA"},"Id":"001o0000007ki8mAAA","Name":"New
+        Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007kiI8AAI"},"Id":"001o0000007kiI8AAI","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007klkDAAQ"},"Id":"001o0000007klkDAAQ","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007kiA9AAI"},"Id":"001o0000007kiA9AAI","Name":"New
+        Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007lx7xAAA"},"Id":"001o0000007lx7xAAA","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007lwxLAAQ"},"Id":"001o0000007lwxLAAQ","Name":"New
+        Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007ki8hAAA"},"Id":"001o0000007ki8hAAA","Name":"New
+        Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007lyRVAAY"},"Id":"001o0000007lyRVAAY","Name":"New
+        Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007lwyKAAQ"},"Id":"001o0000007lwyKAAQ","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007lx7nAAA"},"Id":"001o0000007lx7nAAA","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007kiGvAAI"},"Id":"001o0000007kiGvAAI","Name":"New
+        Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007kiEVAAY"},"Id":"001o0000007kiEVAAY","Name":"New
+        Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007lyxNAAQ"},"Id":"001o0000007lyxNAAQ","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007klk8AAA"},"Id":"001o0000007klk8AAA","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007kiIhAAI"},"Id":"001o0000007kiIhAAI","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007lyxIAAQ"},"Id":"001o0000007lyxIAAQ","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007lx5hAAA"},"Id":"001o0000007lx5hAAA","Name":"New
+        Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007kkQ8AAI"},"Id":"001o0000007kkQ8AAI","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007lx4tAAA"},"Id":"001o0000007lx4tAAA","Name":"New
+        Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007lx4uAAA"},"Id":"001o0000007lx4uAAA","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007lx8WAAQ"},"Id":"001o0000007lx8WAAQ","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007kiIDAAY"},"Id":"001o0000007kiIDAAY","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007klr4AAA"},"Id":"001o0000007klr4AAA","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007khwIAAQ"},"Id":"001o0000007khwIAAQ","Name":"New
+        Edit Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007kgm4AAA"},"Id":"001o0000007kgm4AAA","Name":"New
+        Name","Site":null,"Phone":null},{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007lwqoAAA"},"Id":"001o0000007lwqoAAA","Name":"New
+        Edit Name","Site":null,"Phone":null}]}'
+    http_version: 
+  recorded_at: Sat, 06 Sep 2014 00:04:00 GMT
+recorded_with: VCR 2.9.2

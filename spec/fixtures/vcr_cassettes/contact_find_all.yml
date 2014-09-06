@@ -1,0 +1,99 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://login.salesforce.com/services/oauth2/token
+    body:
+      encoding: US-ASCII
+      string: grant_type=password&client_id=3MVG9xOCXq4ID1uE7J0Lsh_HB4mKCSUpUtYqg7jLxASG7CvXgX74u8QW5VOPXbkLxISw4QrzVmip9TWxBR_Xk&client_secret=8459004633053529605&username=xptavares%40gmail.com&password=120430ale4VZjPPcUBhQmFVfp6jGTlgCI9
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 06 Sep 2014 01:10:15 GMT
+      Set-Cookie:
+      - BrowserId=XgvtefzXSoaSqyyxzR-dwQ;Path=/;Domain=.salesforce.com;Expires=Wed,
+        05-Nov-2014 01:10:15 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache, no-store
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":"https://login.salesforce.com/id/00Do0000000Zn13EAC/005o0000000xr6hAAA","issued_at":"1409965815404","token_type":"Bearer","instance_url":"https://na17.salesforce.com","signature":"O/DZNdoEdabl/THhDT27vW2Z/WEhERLyyy1smMZK4y4=","access_token":"00Do0000000Zn13!ARQAQLuncHwxQ2WUHHdG8fp0Z0QjJp5yahqY5VgbSR4g6JZmWoI1aTpHRrf17ylL7aSkKQv.hbiIjGYgyGzL6Iz1EwQxEPEI"}'
+    http_version: 
+  recorded_at: Sat, 06 Sep 2014 01:10:15 GMT
+- request:
+    method: get
+    uri: https://na17.salesforce.com/services/data/v26.0/query?q=select%20Id,%20Account.Name,%20Account.Site,%20Phone,%20Email%20from%20Contact
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Authorization:
+      - OAuth 00Do0000000Zn13!ARQAQLuncHwxQ2WUHHdG8fp0Z0QjJp5yahqY5VgbSR4g6JZmWoI1aTpHRrf17ylL7aSkKQv.hbiIjGYgyGzL6Iz1EwQxEPEI
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 06 Sep 2014 01:10:17 GMT
+      Set-Cookie:
+      - BrowserId=90a1P4YPSj6jZYltGTWN7Q;Path=/;Domain=.salesforce.com;Expires=Wed,
+        05-Nov-2014 01:10:17 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Sforce-Limit-Info:
+      - api-usage=172/15000
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"totalSize":20,"done":true,"records":[{"attributes":{"type":"Contact","url":"/services/data/v26.0/sobjects/Contact/003o0000006lZzzAAE"},"Id":"003o0000006lZzzAAE","Account":{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkAQAAY"},"Name":"United
+        Oil & Gas, Singapore","Site":null},"Phone":"(650) 450-8810","Email":"tripley@uog.com"},{"attributes":{"type":"Contact","url":"/services/data/v26.0/sobjects/Contact/003o0000006la00AAA"},"Id":"003o0000006la00AAA","Account":{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkAQAAY"},"Name":"United
+        Oil & Gas, Singapore","Site":null},"Phone":"(650) 450-8810","Email":"ldcruz@uog.com"},{"attributes":{"type":"Contact","url":"/services/data/v26.0/sobjects/Contact/003o0000006la01AAA"},"Id":"003o0000006la01AAA","Account":{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkAOAAY"},"Name":"GenePoint","Site":null},"Phone":"(650)
+        867-3450","Email":"efrank@genepoint.com"},{"attributes":{"type":"Contact","url":"/services/data/v26.0/sobjects/Contact/003o0000006la02AAA"},"Id":"003o0000006la02AAA","Account":{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkAYAAY"},"Name":"United
+        Oil & Gas Corp.","Site":null},"Phone":"(212) 842-5500","Email":"agreen@uog.com"},{"attributes":{"type":"Contact","url":"/services/data/v26.0/sobjects/Contact/003o0000006la03AAA"},"Id":"003o0000006la03AAA","Account":{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkAZAAY"},"Name":"sForce","Site":null},"Phone":null,"Email":null},{"attributes":{"type":"Contact","url":"/services/data/v26.0/sobjects/Contact/003o0000006la04AAA"},"Id":"003o0000006la04AAA","Account":{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkAZAAY"},"Name":"sForce","Site":null},"Phone":null,"Email":null},{"attributes":{"type":"Contact","url":"/services/data/v26.0/sobjects/Contact/003o0000006lZzlAAE"},"Id":"003o0000006lZzlAAE","Account":{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkARAAY"},"Name":"Edge
+        Communications","Site":null},"Phone":"(512) 757-6000","Email":"rose@edge.com"},{"attributes":{"type":"Contact","url":"/services/data/v26.0/sobjects/Contact/003o0000006lZzmAAE"},"Id":"003o0000006lZzmAAE","Account":{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkARAAY"},"Name":"Edge
+        Communications","Site":null},"Phone":"(512) 757-6000","Email":"sean@edge.com"},{"attributes":{"type":"Contact","url":"/services/data/v26.0/sobjects/Contact/003o0000006lZznAAE"},"Id":"003o0000006lZznAAE","Account":{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkASAAY"},"Name":"Burlington
+        Textiles Corp of America","Site":null},"Phone":"(336) 222-7000","Email":"jrogers@burlington.com"},{"attributes":{"type":"Contact","url":"/services/data/v26.0/sobjects/Contact/003o0000006lZzoAAE"},"Id":"003o0000006lZzoAAE","Account":{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkATAAY"},"Name":"Pyramid
+        Construction Inc.","Site":null},"Phone":"(014) 427-4427","Email":"pat@pyramid.net"},{"attributes":{"type":"Contact","url":"/services/data/v26.0/sobjects/Contact/003o0000006lZzpAAE"},"Id":"003o0000006lZzpAAE","Account":{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkAUAAY"},"Name":"Dickenson
+        plc","Site":null},"Phone":"(785) 241-6200","Email":"a_young@dickenson.com"},{"attributes":{"type":"Contact","url":"/services/data/v26.0/sobjects/Contact/003o0000006lZzqAAE"},"Id":"003o0000006lZzqAAE","Account":{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkAVAAY"},"Name":"Grand
+        Hotels & Resorts Ltd","Site":null},"Phone":"(312) 596-1000","Email":"barr_tim@grandhotels.com"},{"attributes":{"type":"Contact","url":"/services/data/v26.0/sobjects/Contact/003o0000006lZzrAAE"},"Id":"003o0000006lZzrAAE","Account":{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkAVAAY"},"Name":"Grand
+        Hotels & Resorts Ltd","Site":null},"Phone":"(312) 596-1000","Email":"bond_john@grandhotels.com"},{"attributes":{"type":"Contact","url":"/services/data/v26.0/sobjects/Contact/003o0000006lZzsAAE"},"Id":"003o0000006lZzsAAE","Account":{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkAYAAY"},"Name":"United
+        Oil & Gas Corp.","Site":null},"Phone":"(212) 842-5500","Email":"spavlova@uog.com"},{"attributes":{"type":"Contact","url":"/services/data/v26.0/sobjects/Contact/003o0000006lZztAAE"},"Id":"003o0000006lZztAAE","Account":{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkAYAAY"},"Name":"United
+        Oil & Gas Corp.","Site":null},"Phone":"(212) 842-5500","Email":"lboyle@uog.com"},{"attributes":{"type":"Contact","url":"/services/data/v26.0/sobjects/Contact/003o0000006lZzuAAE"},"Id":"003o0000006lZzuAAE","Account":{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkAWAAY"},"Name":"Express
+        Logistics and Transport","Site":null},"Phone":"(503) 421-7800","Email":"b.levy@expressl&t.net"},{"attributes":{"type":"Contact","url":"/services/data/v26.0/sobjects/Contact/003o0000006lZzvAAE"},"Id":"003o0000006lZzvAAE","Account":{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkAWAAY"},"Name":"Express
+        Logistics and Transport","Site":null},"Phone":"(503) 421-7800","Email":"j.davis@expressl&t.net"},{"attributes":{"type":"Contact","url":"/services/data/v26.0/sobjects/Contact/003o0000006lZzwAAE"},"Id":"003o0000006lZzwAAE","Account":{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkAXAAY"},"Name":"University
+        of Arizona","Site":null},"Phone":"(520) 773-9050","Email":"jane_gray@uoa.edu"},{"attributes":{"type":"Contact","url":"/services/data/v26.0/sobjects/Contact/003o0000006lZzxAAE"},"Id":"003o0000006lZzxAAE","Account":{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkAYAAY"},"Name":"United
+        Oil & Gas Corp.","Site":null},"Phone":"(212) 842-5500","Email":"asong@uog.com"},{"attributes":{"type":"Contact","url":"/services/data/v26.0/sobjects/Contact/003o0000006lZzyAAE"},"Id":"003o0000006lZzyAAE","Account":{"attributes":{"type":"Account","url":"/services/data/v26.0/sobjects/Account/001o0000007gkAPAAY"},"Name":"United
+        Oil & Gas, UK","Site":null},"Phone":"+44 191 4956203","Email":"ajames@uog.com"}]}'
+    http_version: 
+  recorded_at: Sat, 06 Sep 2014 01:10:17 GMT
+recorded_with: VCR 2.9.2
