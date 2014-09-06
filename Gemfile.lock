@@ -1,7 +1,8 @@
 PATH
   remote: .
   specs:
-    rd_api (0.0.1)
+    rd_api (0.0.2)
+      restforce
 
 GEM
   remote: https://rubygems.org/
@@ -48,7 +49,6 @@ DEPENDENCIES
   bundler (~> 1.7)
   rake (~> 10.0)
   rd_api!
-  restforce
   rspec
   vcr
   webmock
